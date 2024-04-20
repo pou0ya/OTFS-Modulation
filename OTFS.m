@@ -86,8 +86,8 @@ dd_rx = fftshift(ifft(fftshift(fft(Y).')).'); %Method 1
 %figure;
 %bar3(Y_DD_equalized);
 %colorbar;
-%xlabel('Doppler Intervals');
-%ylabel('Delay Intervals');
+%xlabel('Doppler');
+%ylabel('Delay');
 %title('Delay-Doppler Domain Representation of OTFS Symbols after Channel Equalization');
 
 %figure;
@@ -102,15 +102,15 @@ dd_rx = fftshift(ifft(fftshift(fft(Y).')).'); %Method 1
 %% plots (Method 2)
 figure('Name','Transmit side');
 bar3(abs(dd_xmit));
-xlabel('Doppler Intervals');
-ylabel('Delay Intervals');
+xlabel('Doppler');
+ylabel('Delay');
 zlabel('Magnitude');
 title('Delay-Doppler Domain');
 %--------------------------------------------------------------------------
 figure('Name','Transmit side');
 surf(abs(X));
-xlabel('Doppler Intervals');
-ylabel('Delay Intervals');
+xlabel('Doppler');
+ylabel('Delay');
 zlabel('Magnitude');
 title('Time-Frequency Domain');
 %--------------------------------------------------------------------------
@@ -124,8 +124,8 @@ title('Time Domain Signal');
 figure('Name','Channel Equalization');
 bar3(Y_DD_equalized);
 colorbar;
-xlabel('Doppler Intervals');
-ylabel('Delay Intervals');
+xlabel('Doppler');
+ylabel('Delay');
 title('Delay-Doppler Domain after Channel Equalization');
 %--------------------------------------------------------------------------
 figure('Name','Receive side');
@@ -137,14 +137,14 @@ title('Time Domain Signal');
 %--------------------------------------------------------------------------
 figure('Name','Receive side');
 surf(abs(Y))
-xlabel('Doppler Intervals');
-ylabel('Delay Intervals');
+xlabel('Doppler');
+ylabel('Delay');
 zlabel('Magnitude');
 title('Time-Frequency Domain');
 %--------------------------------------------------------------------------
 figure('Name','Receive side');
 bar3(abs(dd_rx))
-xlabel('Doppler Intervals');
-ylabel('Delay Intervals');
+xlabel('Doppler');
+ylabel('Delay');
 zlabel('Magnitude');
 title('Delay-Doppler Domain');
